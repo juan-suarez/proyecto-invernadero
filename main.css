@@ -1,0 +1,41 @@
+body{
+    background-color: #90b4ce34;
+}
+#grafica_humedad{
+    float:left;
+    width: 35%;
+    margin-top: 5%;
+    margin-left: 13%;
+}
+#grafica_temperatura{
+
+    width: 35%;
+    float: right;
+    margin-top: 5%;
+    margin-right: 13%;
+}
+#hum{
+    float: left;
+    margin-left: 35%;
+    color: black;
+}
+#temp{
+    float: right;
+    margin-right: 32%;
+    color: black;
+}
+.container{
+    margin-top: 5%;
+    position:absolute;
+    margin-left: 10%;
+}
+li.nav-item.active a {
+    background: #fff;
+    border: 1px solid #eee;
+    border-bottom: none
+}
+.historial{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+}

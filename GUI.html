@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Arduino_Invernadero</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div id="particles-js">
+        <div class="card text-center container">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active " data-toggle="tab" href="#Grafica">Grafica</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" data-toggle="tab" href="#Historial">Historial</a>
+                </li>
+              </ul>
+        </div>
+        <div class="tab-content card-body">
+            <div class="grafica tab-pane active" id="Grafica">
+                <h1 class="card-title">Mini Invernadero</h1>
+                <p class="card-text">Aqui podemos ver graficas en vivo de los parametros de nuestro invernadero.</p>
+                <div id="grafica_humedad">
+                    <canvas id="Humedad" width="1" height="1"></canvas>
+                </div>
+                <div id="grafica_temperatura">
+                    <canvas id="Temperatura" width="1" height="1"></canvas>
+                </div>
+                <div id="hum">
+                    <h3 id="humedadtexto">67%</h3>
+                </div>
+                <div id="temp">
+                    <h3 id="temperaturatexto">25°</h3>
+                </div>
+            </div>
+            <div class="historial tab-pane" id="Historial" >
+                <h1 class="card-title">Historial</h1>
+                <p class="card-text">Aqui podemos evidenciar los momentos en que se realiza una accion en el invernadero</p>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Humedad(%)</th>
+                        <th scope="col">Temperatura(°c)</th>
+                        <th scope="col">Bombilla</th>
+                        <th scope="col">Valvula</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>25/05/2021</td>
+                        <td>67</td>
+                        <td>25</td>
+                        <td>si</td>
+                        <td>si</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>25/05/2021</td>
+                        <td>68</td>
+                        <td>26</td>
+                        <td>si</td>
+                        <td>si</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td >25/05/2021</td>
+                        <td>69</td>
+                        <td>23</td>
+                        <td>si</td>
+                        <td>si</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script src="node_modules/js/particles.min.js"></script>
+    <script src="node_modules/js/appsign-up.js"></script>
+    <script src="node_modules/js/app.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>   
+</body>
+
+</html>
